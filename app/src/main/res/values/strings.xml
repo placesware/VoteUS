@@ -1,4 +1,65 @@
 <resources>
     <string name="app_name">Vote US</string>
-    <string name="title_activity_maps">Map</string>
+
+    <string name="locations_map_error_play_services_unavailable">location unavailable</string>
+
+
+    <!-- Locations strings -->
+    <string name="locations_button_list_map">map</string>
+    <string name="locations_list_label_all_sites">All Sites</string>
+    <string name="locations_list_label_early_voting">Early Vote</string>
+    <string name="locations_list_label_polling_sites">Polling Location</string>
+    <string name="locations_list_label_drop_off">Drop Box</string>
+    <string name="locations_list_none_found">No locations found.</string>
+    <string name="locations_distance_suffix_imperial">mi.</string>
+    <string name="locations_distance_suffix_metric">km</string>
+    <string name="locations_label_empty_list">There is currently no information on polling sites in your area.</string>
+
+
+    <!-- Home View Strings -->
+    <string name="fragment_home_text_view_brand_name">VOTING INFORMATION PROJECT</string>
+    <string name="fragment_home_text_view_voting_info">Voting Information</string>
+    <string name="fragment_home_text_view_getting_started">Enter Your Address</string>
+    <string name="fragment_home_text_view_election_spinner_text">Pick an Election</string>
+    <string name="fragment_home_text_view_party_spinner_text">There are partisan contests in this election_ Choose a party to view_</string>
+    <string name="activity_home_status_loading">Loading data…</string>
+    <string name="fragment_home_error_address_not_found">Looks like we can\'t find your address_ Please check that it\'s right and try again_</string>
+    <string name="fragment_home_error_parsing_address">We couldn\'t read the address you entered_  Please check that it\'s right and try again</string>
+    <string name="fragment_home_error_no_election_for_address">We couldn\'t find any election information for the address you entered_\n\nPlease check to make sure you entered it correctly, contact your election official, or try again closer to Election Day_\n\nInformation will be available 2 &#8211; 4 weeks prior to the election_ For the most complete and up to date information, consult your local election official_</string>
+    <string name="fragment_home_error_no_address">Please check that you\'ve got an address entered and try again_</string>
+    <string name="fragment_home_error_unknown">We weren\'t able to get results for the address you entered_  Please try again later_</string>
+    <string name="fragment_home_error_no_internet">Cannot connect to the Internet_  Please check your connection_</string>
+    <string name="fragment_home_go_button_accessibility_description">Go to search results_</string>
+    <string name="fragment_home_select_contact_button_description">Open contacts to select a contact address_</string>
+    <string name="fragment_home_select_location_button_description">Use current location to search for elections_</string>
+    <string name="fragment_home_search_button_description">Search for results_</string>
+    <string name="fragment_home_election_spinner_description">Please pick an election"</string>
+    <string name="fragment_home_party_spinner_description">Please pick a party:</string>
+    <string name="fragment_home_all_parties">All Parties</string>
+    <string name="title_activity_polling_location_map">Map</string>
+
+    <string name="open_activity">Set Address</string>
+    <string name="open_map">Search</string>
+    <string name="selected_place">Last Selected Place:</string>
+    <string name="place_details">
+    <![CDATA[
+        <b>%1$s</b>
+        <br/>
+        <i>Place Id: %2$s</i>
+        <br/>
+        Address: %3$s
+        <br/>
+        Phone: %4$s
+        <br/>
+        Website: %5$s
+    ]]>
+    </string>
+
+    <string name="intro_message">Vote US</string>
+    <string name="intro_company">by placesware</string>
+    <string name="intro_tagline">find your Vote</string>
+    <string name="intro_election_type">General Election 2016</string>
+    <string name="intro_election_date">Tuesday, November 8</string>
+
+
 </resources>

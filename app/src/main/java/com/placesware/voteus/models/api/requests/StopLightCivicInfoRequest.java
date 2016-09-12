@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.demo.ergobot.civicusdemo.R;
+import com.placesware.voteus.R;
 
 /**
  * Created by marcvandehey on 3/28/16.

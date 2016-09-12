@@ -1,0 +1,250 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.placesware.voteus.SelectedModelFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:id="@+id/headerlayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Title Selected Event"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/pollingname"
+                android:textColor="@color/colorPrimaryLight"
+                android:layout_gravity="left|top" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimaryLight"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/blanktextview"
+                android:layout_below="@id/pollingname"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                tools:text="Event Type"
+                android:paddingTop="2dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/pollingtype"
+                android:textColor="@color/colorPrimaryLight"
+                android:layout_below="@id/blanktextview" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerlayout"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/linearLayout"
+            android:background="@drawable/custom_border">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_phone_black_24dp"
+                tools:text="Call"
+                android:text="Call"
+                android:id="@+id/mainbuttonone"
+                android:textColor="@color/colorAccent"
+                android:drawableTint="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimaryLight"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAlignment="center" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Save"
+                android:text="Save"
+                android:id="@+id/mainbuttontwo"
+                android:textColor="@color/colorAccent"
+                android:drawableTint="@color/colorAccent"
+                android:drawableTop="@drawable/ic_favorite_black_24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/mainbuttonthree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Website"
+                tools:text="Website"
+                android:textColor="@color/colorAccent"
+                style="?android:attr/borderlessButtonStyle"
+                android:drawableTint="@color/colorAccent"
+                android:drawableTop="@drawable/ic_public_black_24dp"
+                android:gravity="center_horizontal" />
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+            <!--tools:text="Event Type"-->
+            <!--android:id="@+id/mainbuttonthree"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_horizontal" />-->
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pollingaddress"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:drawablePadding="15dp"
+                tools:text="Some Address Ln, Urbandale, IA 50206"
+                android:gravity="fill_vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:drawableTint="@color/colorAccent"
+                android:textColor="@color/colorPrimaryText"/>
+
+
+            <Button
+                android:id="@+id/sharebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                style="?android:attr/imageButtonStyle"
+                android:drawablePadding="15dp"
+                android:layout_centerInParent="true"
+                android:text="Share this!"
+                android:drawableLeft="@drawable/ic_share_black_24dp"
+                android:layout_below="@+id/pollingaddress"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp" />
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/pollingdate"-->
+                <!--android:layout_below="@id/pollingaddress"-->
+                <!--android:drawableLeft="@drawable/ic_access_time_black_24dp"-->
+                <!--android:drawablePadding="15dp"-->
+                <!--tools:text="12 Jan, 2016 8:00"-->
+                <!--android:gravity="fill_vertical"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:drawableTint="@color/colorAccent"-->
+                <!--android:textColor="@color/colorPrimaryText"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/pollinghours"-->
+                <!--android:layout_below="@id/pollingdate"-->
+                <!--android:drawableLeft="@drawable/ic_phone_black_24dp"-->
+                <!--android:drawablePadding="15dp"-->
+                <!--tools:text="(515) 555-3009"-->
+                <!--android:gravity="fill_vertical"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:drawableTint="@color/colorAccent"-->
+                <!--android:textColor="@color/colorPrimaryText"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/eventrowwebsite"-->
+                <!--android:layout_below="@id/pollinghours"-->
+                <!--android:drawableLeft="@drawable/ic_public_black_24dp"-->
+                <!--android:drawablePadding="15dp"-->
+                <!--tools:text="http://www.internets.com/"-->
+                <!--android:gravity="fill_vertical"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:drawableTint="@color/colorAccent"-->
+                <!--android:textColor="@color/colorPrimaryText"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/eventrowemail"-->
+                <!--android:layout_below="@id/eventrowwebsite"-->
+                <!--android:drawableLeft="@drawable/ic_email_black_24dp"-->
+                <!--android:drawablePadding="15dp"-->
+                <!--tools:text="individual@internets.com"-->
+                <!--android:gravity="fill_vertical"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:drawableTint="@color/colorAccent"-->
+                <!--android:textColor="@color/colorPrimaryText"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/eventrowdetails"-->
+                <!--android:layout_below="@id/eventrowemail"-->
+                <!--android:drawableLeft="@drawable/ic_details_black_24dp"-->
+                <!--android:drawablePadding="15dp"-->
+                <!--tools:text="Our tubing hill operates for the public from 1 p.m. to 5 p.m. Saturdays, Sundays and New Years Day and is $5 per person.  Private groups may make reservations evenings during the week. Cost is $100 for up to 20 people. This includes a tube and lift pass. Each person over 20 is $5. We have a pulley tow rope to get you back up the hill with your tube and a warming hut.\nFor more information or to make reservations please call 712.947.4270 or email Diana at ddowhower@co.Plymouth.ia.us."-->
+                <!--android:gravity="fill_vertical"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:drawableTint="#FFFFFF"-->
+                <!--android:textColor="@color/colorPrimaryText"/>-->
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <!--<Button-->
+        <!--android:id="@+id/btn2"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="This text is below the image"-->
+        <!--android:drawableTop="@drawable/ic_menu_manage" />-->
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

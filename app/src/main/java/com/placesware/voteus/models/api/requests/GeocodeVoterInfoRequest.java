@@ -2,7 +2,7 @@ package com.placesware.voteus.models.api.requests;
 
 import android.support.annotation.NonNull;
 
-import com.demo.ergobot.civicusdemo.models.VoterInfoResponse;
+import com.placesware.voteus.models.VoterInfoResponse;
 
 /**
  * Created by marcvandehey on 4/18/16.

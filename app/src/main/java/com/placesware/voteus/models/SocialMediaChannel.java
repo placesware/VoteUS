@@ -5,7 +5,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.DrawableRes;
 
-import com.demo.ergobot.civicusdemo.R;
+import com.placesware.voteus.R;
 
 import java.util.Arrays;
 

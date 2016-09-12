@@ -6,8 +6,8 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 
 import com.google.android.gms.maps.model.LatLng;
-import com.demo.ergobot.civicusdemo.R;
-import com.demo.ergobot.civicusdemo.models.GoogleDirections.Location;
+import com.placesware.voteus.R;
+import com.placesware.voteus.models.GoogleDirections.Location;
 
 /**
  * Created by kathrynkillebrew on 7/14/14.

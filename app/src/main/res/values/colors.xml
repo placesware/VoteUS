@@ -7,6 +7,9 @@
     <color name="blue_grey_800">#37474F</color>
     <color name="blue_grey_900">#263238</color>
 
+    <color name="primary">#4caf50</color>
+    <color name="primary_pressed">#388e3c</color>
+    <color name="ripple">#388e3c</color>
 
     <color name="colorPrimary">#9E9E9E</color>
     <color name="colorPrimaryLight">#F5F5F5</color>

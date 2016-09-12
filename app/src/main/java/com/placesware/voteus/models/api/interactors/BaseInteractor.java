@@ -5,9 +5,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-//import com.demo.ergobot.civicusdemo.models.api.requests.RequestType;
-
-import com.demo.ergobot.civicusdemo.models.api.requests.RequestType;
+import com.placesware.voteus.models.api.requests.RequestType;
 
 import java.lang.ref.WeakReference;
 

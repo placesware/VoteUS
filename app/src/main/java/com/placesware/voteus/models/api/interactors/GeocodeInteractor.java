@@ -2,17 +2,17 @@ package com.placesware.voteus.models.api.interactors;
 
 import android.util.Log;
 
-import com.demo.ergobot.civicusdemo.models.CivicApiAddress;
-import com.demo.ergobot.civicusdemo.models.ElectionAdministrationBody;
-import com.demo.ergobot.civicusdemo.models.GoogleDirections.Location;
-import com.demo.ergobot.civicusdemo.models.PollingLocation;
-import com.demo.ergobot.civicusdemo.models.VoterInfoResponse;
-import com.demo.ergobot.civicusdemo.models.api.requests.GeocodeRequest;
-import com.demo.ergobot.civicusdemo.models.api.requests.GeocodeVoterInfoRequest;
-import com.demo.ergobot.civicusdemo.models.api.requests.RequestType;
-import com.demo.ergobot.civicusdemo.models.geocode.GeocodeLocationResult;
-import com.demo.ergobot.civicusdemo.models.geocode.Result;
-import com.demo.ergobot.civicusdemo.models.singletons.VoterInformation;
+import com.placesware.voteus.models.CivicApiAddress;
+import com.placesware.voteus.models.ElectionAdministrationBody;
+import com.placesware.voteus.models.GoogleDirections.Location;
+import com.placesware.voteus.models.PollingLocation;
+import com.placesware.voteus.models.VoterInfoResponse;
+import com.placesware.voteus.models.api.requests.GeocodeRequest;
+import com.placesware.voteus.models.api.requests.GeocodeVoterInfoRequest;
+import com.placesware.voteus.models.api.requests.RequestType;
+import com.placesware.voteus.models.geocode.GeocodeLocationResult;
+import com.placesware.voteus.models.geocode.Result;
+import com.placesware.voteus.models.singletons.VoterInformation;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -34,17 +34,17 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-//import com.demo.ergobot.civicusdemo.models.CivicApiAddress;
-//import com.demo.ergobot.civicusdemo.models.ElectionAdministrationBody;
-//import com.demo.ergobot.civicusdemo.models.GoogleDirections.Location;
-//import com.demo.ergobot.civicusdemo.models.PollingLocation;
-//import com.demo.ergobot.civicusdemo.models.VoterInfoResponse;
-//import com.demo.ergobot.civicusdemo.models.api.requests.GeocodeRequest;
-//import com.demo.ergobot.civicusdemo.models.api.requests.GeocodeVoterInfoRequest;
-//import com.demo.ergobot.civicusdemo.models.api.requests.RequestType;
-//import com.demo.ergobot.civicusdemo.models.geocode.GeocodeLocationResult;
-//import com.demo.ergobot.civicusdemo.models.geocode.Result;
-//import com.demo.ergobot.civicusdemo.models.singletons.VoterInformation;
+//import com.placesware.voteus.models.CivicApiAddress;
+//import com.placesware.voteus.models.ElectionAdministrationBody;
+//import com.placesware.voteus.models.GoogleDirections.Location;
+//import com.placesware.voteus.models.PollingLocation;
+//import com.placesware.voteus.models.VoterInfoResponse;
+//import com.placesware.voteus.models.api.requests.GeocodeRequest;
+//import com.placesware.voteus.models.api.requests.GeocodeVoterInfoRequest;
+//import com.placesware.voteus.models.api.requests.RequestType;
+//import com.placesware.voteus.models.geocode.GeocodeLocationResult;
+//import com.placesware.voteus.models.geocode.Result;
+//import com.placesware.voteus.models.singletons.VoterInformation;
 
 /**
  * Created by marcvandehey on 4/15/16.

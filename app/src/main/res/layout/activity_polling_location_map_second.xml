@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.placesware.voteus.PollingLocationMapActivity">
+
+
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoShadowHeight="4dp"
+        sothree:umanoOverlay="false"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoFadeColor="@android:color/transparent"
+        sothree:umanoScrollableView="@+id/list">
+
+
+        <!-- MAIN CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.placesware.voteus.PollingLocationMapActivity" />
+
+
+        </LinearLayout>
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/fabf"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="top|right"-->
+            <!--android:layout_marginBottom="50dp"-->
+            <!--android:layout_marginRight="16dp"-->
+            <!--android:src="@android:drawable/ic_input_add"-->
+            <!--android:visibility="visible"/>-->
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="false"
+            android:id="@+id/dragView">
+
+
+            <!--<include layout="@layout/content_navigation" />-->
+            <FrameLayout android:id="@+id/slidecontainer" android:layout_width="match_parent" android:layout_height="match_parent" />
+
+
+
+
+        </LinearLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+        <!--&lt;!&ndash; FLOATING ACTION BUTTON &ndash;&gt;-->
+        <!--<com.melnykov.fab.FloatingActionButton-->
+            <!--android:id="@+id/fabf"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom|right"-->
+            <!--android:layout_marginRight="16dp"-->
+            <!--android:layout_marginBottom="16dp"/>-->
+
+
+
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/directionsfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_directions_black_24dp"
+        app:backgroundTint="@color/colorPrimaryLight"
+        android:tint="@color/colorAccent"
+        android:layout_gravity="bottom|right"
+        app:layout_anchorGravity="top"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        />
+
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/currentlocationfab"-->
+        <!--app:backgroundTint="@color/colorPrimaryLight"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/ic_gps_fixed_black_24dp"-->
+        <!--app:layout_anchor="@id/dragView"-->
+        <!--app:layout_anchorGravity="top|right"-->
+        <!--android:layout_gravity="right|bottom"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginBottom="100dp"-->
+        <!--/>-->
+
+</FrameLayout>

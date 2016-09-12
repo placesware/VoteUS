@@ -5,8 +5,8 @@ package com.placesware.voteus.models.geocode;
  */
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.demo.ergobot.civicusdemo.models.GoogleDirections.Bounds;
-import com.demo.ergobot.civicusdemo.models.GoogleDirections.Location;
+import com.placesware.voteus.models.GoogleDirections.Bounds;
+import com.placesware.voteus.models.GoogleDirections.Location;
 
 public class Geometry {
 

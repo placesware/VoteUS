@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.demo.ergobot.civicusdemo.models.PollingLocation;
+import com.placesware.voteus.models.PollingLocation;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -37,15 +37,12 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
     ArrayList<PollingLocation> pollingLocations;
     SlidingUpPanelLayout slidingUpPanelLayout;
     SlidingUpPanelLayout.PanelState panelState;
-    public FloatingActionButton directionsMiddleFab;
+//    public FloatingActionButton directionsMiddleFab;
     public FloatingActionButton directionsLowerFab;
-
-
-    FloatingActionButton currentLocation;
 
     FrameLayout rootParent;
 
-    int percentMiddleHeightDp;
+//    int percentMiddleHeightDp;
     int percentLowerHeightDp;
     int percentWidthDp;
 
@@ -55,29 +52,25 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
         setContentView(R.layout.activity_polling_location_map_second);
 
         rootParent = (FrameLayout) findViewById(R.id.parent);
-        directionsMiddleFab = (FloatingActionButton) findViewById(R.id.directionsmiddlefab);
+//        directionsMiddleFab = (FloatingActionButton) findViewById(R.id.directionsmiddlefab);
         directionsLowerFab = (FloatingActionButton) findViewById(R.id.directionsfab);
-        currentLocation = (FloatingActionButton) findViewById(R.id.currentlocationfab);
-
 
         DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
         float dpHeight = displayMetrics.heightPixels / displayMetrics.density;
         float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
-        percentMiddleHeightDp = new Double(dpHeight * .4f).intValue();
+//        percentMiddleHeightDp = new Double(dpHeight * .4f).intValue();
         percentLowerHeightDp = new Double(dpHeight * .1f).intValue();
         percentWidthDp = new Double(dpWidth * .05f).intValue();
-        setMargins(directionsMiddleFab, 0, 0, percentWidthDp, percentMiddleHeightDp+new Double(percentMiddleHeightDp*.05).intValue());
-        setMargins(directionsLowerFab, 0, 0, percentWidthDp, percentLowerHeightDp - new Double(percentLowerHeightDp*.05).intValue());
-        setMargins(currentLocation, 0, 0, percentWidthDp, percentLowerHeightDp * 2);
+//        setMargins(directionsMiddleFab, 0, 0, percentWidthDp, new Double(dpHeight).intValue()+new Double(dpHeight*.05).intValue());
+//        setMargins(directionsLowerFab, 0, 0, percentWidthDp, percentLowerHeightDp - new Double(percentLowerHeightDp*.05).intValue());
 
         directionsLowerFab.hide();
-        directionsMiddleFab.hide();
-        currentLocation.hide();
+//        directionsMiddleFab.hide();
 
 
         slidingUpPanelLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
         slidingUpPanelLayout.setAnchorPoint(.4f);
-        slidingUpPanelLayout.setParallaxOffset(percentMiddleHeightDp);
+//        slidingUpPanelLayout.setParallaxOffset(800);
         slidingUpPanelLayout.setPanelHeight(percentLowerHeightDp);
 
         retrieveValuesFromBundle(savedInstanceState);
@@ -97,10 +90,8 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
             @Override
             public void onPanelSlide(View panel, float slideOffset) {
                 Log.i(TAG, "onPanelSlide, offset " + slideOffset);
-//                filterFab.hide();
                 directionsLowerFab.hide();
-                directionsMiddleFab.hide();
-                currentLocation.hide();
+//                directionsMiddleFab.hide();
 
             }
 
@@ -108,14 +99,15 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
             public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
                 Log.i(TAG, "onPanelStateChanged " + newState);
 
-
+//                if(mMap != null){
+//                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(pollingLocations.get(0).location.lat, pollingLocations.get(0).location.lng), 12));
+//
+//                }
                 if (newState == SlidingUpPanelLayout.PanelState.COLLAPSED) {
                     directionsLowerFab.show();
-//                    filterFab.show();
-//                    currentLocation.show();
                 }
                 if (newState == SlidingUpPanelLayout.PanelState.ANCHORED) {
-                    directionsMiddleFab.show();
+//                    directionsMiddleFab.show();
                 }
 
 
@@ -137,9 +129,8 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
 
         if (panelState == SlidingUpPanelLayout.PanelState.COLLAPSED) {
             directionsLowerFab.show();
-            currentLocation.show();
         } else {
-            directionsMiddleFab.show();
+//            directionsMiddleFab.show();
         }
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -148,10 +139,26 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
 
     }
 
+//    private int computePanelTopPosition(float slideOffset) {
+//        int mSlideRange = slidingUpPanelLayout.getMeasuredHeight() - slidingUpPanelLayout.getPanelHeight();
+//        int slidingViewHeight = slidingUpPanelLayout != null ? slidingUpPanelLayout.getMeasuredHeight() : 0;
+//        int slidePixelOffset = (int) (slideOffset * mSlideRange);
+//        // Compute the top of the panel if its collapsed
+//        return mIsSlidingUp
+//                ? getMeasuredHeight() - getPaddingBottom() - mPanelHeight - slidePixelOffset
+//                : getPaddingTop() - slidingViewHeight + mPanelHeight + slidePixelOffset;
+//    }
+
 
     public void setPanelPeakHeight(int height) {
         slidingUpPanelLayout.setPanelHeight(height);
         setMargins(directionsLowerFab, 0, 0, percentWidthDp, height- new Double(height*.25).intValue());
+        float middleY = slidingUpPanelLayout.getBottom() + slidingUpPanelLayout.getPanelHeight()/getApplicationContext().getResources().getDisplayMetrics().density;
+//        setMargins(directionsMiddleFab, 0, 0, percentWidthDp, new Double(middleY).intValue()+new Double(middleY).intValue());
+
+        slidingUpPanelLayout.setParallaxOffset(height);
+
+
     }
 
     public static void setMargins(View v, int l, int t, int r, int b) {

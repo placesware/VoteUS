@@ -38,9 +38,9 @@
     <string name="fragment_home_all_parties">All Parties</string>
     <string name="title_activity_polling_location_map">Map</string>
 
-    <string name="open_activity">Set Address</string>
+    <string name="open_activity">Voter Address</string>
     <string name="open_map">Search</string>
-    <string name="selected_place">Last Selected Place:</string>
+    <string name="selected_place">Selected Address:</string>
     <string name="place_details">
     <![CDATA[
         <b>%1$s</b>

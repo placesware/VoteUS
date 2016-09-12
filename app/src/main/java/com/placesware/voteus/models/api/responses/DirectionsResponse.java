@@ -1,6 +1,6 @@
 package com.placesware.voteus.models.api.responses;
 
-import com.demo.ergobot.civicusdemo.models.GoogleDirections.Route;
+import com.placesware.voteus.models.GoogleDirections.Route;
 
 import java.util.List;
 

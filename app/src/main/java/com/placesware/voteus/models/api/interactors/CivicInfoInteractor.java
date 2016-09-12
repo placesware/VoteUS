@@ -2,14 +2,11 @@ package com.placesware.voteus.models.api.interactors;
 
 import android.util.Log;
 
-import com.demo.ergobot.civicusdemo.models.VoterInfoResponse;
-import com.demo.ergobot.civicusdemo.models.api.requests.CivicInfoRequest;
-import com.demo.ergobot.civicusdemo.models.api.requests.RequestType;
+import com.placesware.voteus.models.VoterInfoResponse;
+import com.placesware.voteus.models.api.requests.CivicInfoRequest;
+import com.placesware.voteus.models.api.requests.RequestType;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-//import com.demo.ergobot.civicusdemo.models.VoterInfoResponse;
-//import com.demo.ergobot.civicusdemo.models.api.requests.CivicInfoRequest;
-//import com.demo.ergobot.civicusdemo.models.api.requests.RequestType;
 
 import java.io.IOException;
 import java.security.KeyManagementException;

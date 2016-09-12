@@ -19,7 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import com.demo.ergobot.civicusdemo.models.PollingLocation;
+import com.placesware.voteus.models.PollingLocation;
 
 
 
@@ -192,10 +192,10 @@ public class SelectedModelFragment extends Fragment {
             }
         };
 
-        ((PollingLocationMapActivity)getActivity()).directionsMiddleFab.setOnClickListener(null);
-        ((PollingLocationMapActivity)getActivity()).directionsMiddleFab.setOnClickListener(fabClickListener);
-        ((PollingLocationMapActivity)getActivity()).directionsLowerFab.setOnClickListener(null);
-        ((PollingLocationMapActivity)getActivity()).directionsLowerFab.setOnClickListener(fabClickListener);
+//        ((PollingLocationMapActivity)getActivity()).directionsMiddleFab.setOnClickListener(null);
+//        ((PollingLocationMapActivity)getActivity()).directionsMiddleFab.setOnClickListener(fabClickListener);
+//        ((PollingLocationMapActivity)getActivity()).directionsLowerFab.setOnClickListener(null);
+//        ((PollingLocationMapActivity)getActivity()).directionsLowerFab.setOnClickListener(fabClickListener);
 
 
         shareButton = (Button)rootView.findViewById(R.id.sharebutton);
@@ -212,7 +212,7 @@ public class SelectedModelFragment extends Fragment {
                 sb.append("Polling Place:\n");
                 sb.append(selectedModel.address.toString());
                 sb.append("\n");
-                sb.append("http://maps.google.com/?q=" + selectedModel.location.lat + "," + selectedModel.location.lng);
+                sb.append("http://maps.google.com/?q=" + selectedModel.location.lat + "," + selectedModel.location.lng + "\n");
                 sb.append("by Placesware");
 
                 Intent shareIntent = ShareCompat.IntentBuilder.from(getActivity())

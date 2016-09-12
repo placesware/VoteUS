@@ -3,7 +3,7 @@ package com.placesware.voteus.models;
 import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
-import com.demo.ergobot.civicusdemo.models.api.requests.RequestType;
+import com.placesware.voteus.models.api.requests.RequestType;
 
 import java.util.ArrayList;
 import java.util.Collections;

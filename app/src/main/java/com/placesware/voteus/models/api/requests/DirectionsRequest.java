@@ -3,7 +3,7 @@ package com.placesware.voteus.models.api.requests;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.demo.ergobot.civicusdemo.models.GoogleDirections.Location;
+import com.placesware.voteus.models.GoogleDirections.Location;
 
 /**
  * Created by marcvandehey on 3/29/16.

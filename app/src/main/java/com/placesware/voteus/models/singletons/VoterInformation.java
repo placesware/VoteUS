@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.demo.ergobot.civicusdemo.models.Candidate;
-import com.demo.ergobot.civicusdemo.models.CivicApiAddress;
-import com.demo.ergobot.civicusdemo.models.Contest;
-import com.demo.ergobot.civicusdemo.models.Election;
-import com.demo.ergobot.civicusdemo.models.ElectionAdministrationBody;
-import com.demo.ergobot.civicusdemo.models.GoogleDirections.Location;
-import com.demo.ergobot.civicusdemo.models.PollingLocation;
-import com.demo.ergobot.civicusdemo.models.VoterInfoResponse;
+import com.placesware.voteus.models.Candidate;
+import com.placesware.voteus.models.CivicApiAddress;
+import com.placesware.voteus.models.Contest;
+import com.placesware.voteus.models.Election;
+import com.placesware.voteus.models.ElectionAdministrationBody;
+import com.placesware.voteus.models.GoogleDirections.Location;
+import com.placesware.voteus.models.PollingLocation;
+import com.placesware.voteus.models.VoterInfoResponse;
 
 import java.util.ArrayList;
 import java.util.Collections;

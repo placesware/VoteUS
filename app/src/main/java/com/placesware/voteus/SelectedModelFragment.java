@@ -19,6 +19,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.placesware.voteus.models.PollingLocation;
 
 
@@ -139,12 +141,17 @@ public class SelectedModelFragment extends Fragment {
     public RelativeLayout header;
     Button shareButton;
 
+    private AdView mAdView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_selected_model_expanded, container, false);
+
+        mAdView = (AdView) rootView.findViewById(R.id.adViewHeader);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         // header
         modelPollingName = (TextView) rootView.findViewById(R.id.pollingname);
         modelPollingTypeHeader = (TextView) rootView.findViewById(R.id.pollingtype);

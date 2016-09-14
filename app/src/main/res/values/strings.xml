@@ -61,5 +61,6 @@
     <string name="intro_election_type">General Election 2016</string>
     <string name="intro_election_date">Tuesday, November 8</string>
 
-
+    <string name="progress_dialog">Searching</string>
+    <string name="please_wait">Please wait...</string>
 </resources>

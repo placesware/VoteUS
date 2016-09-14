@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context="com.placesware.voteus.SelectedModelFragment">
 
     <RelativeLayout
@@ -55,63 +56,63 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/headerlayout"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
+            android:orientation="vertical"
             android:id="@+id/linearLayout"
             android:background="@drawable/custom_border">
 
-            <Button
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adViewHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableTop="@drawable/ic_phone_black_24dp"
-                tools:text="Call"
-                android:text="Call"
-                android:id="@+id/mainbuttonone"
-                android:textColor="@color/colorAccent"
-                android:drawableTint="@color/colorAccent"
-                android:backgroundTint="@color/colorPrimaryLight"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textAlignment="center" />
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                ads:adSize="LARGE_BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id"
+                android:layout_gravity="center"></com.google.android.gms.ads.AdView>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Save"
-                android:text="Save"
-                android:id="@+id/mainbuttontwo"
-                android:textColor="@color/colorAccent"
-                android:drawableTint="@color/colorAccent"
-                android:drawableTop="@drawable/ic_favorite_black_24dp"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_weight="1"
-                android:gravity="center_horizontal" />
 
-            <Button
-                android:id="@+id/mainbuttonthree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Website"
-                tools:text="Website"
-                android:textColor="@color/colorAccent"
-                style="?android:attr/borderlessButtonStyle"
-                android:drawableTint="@color/colorAccent"
-                android:drawableTop="@drawable/ic_public_black_24dp"
-                android:gravity="center_horizontal" />
+            <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableTop="@drawable/ic_phone_black_24dp"-->
+                <!--tools:text="Call"-->
+                <!--android:text="Call"-->
+                <!--android:id="@+id/mainbuttonone"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--android:drawableTint="@color/colorAccent"-->
+                <!--android:backgroundTint="@color/colorPrimaryLight"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:textAlignment="center" />-->
 
-            <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
-            <!--tools:text="Event Type"-->
-            <!--android:id="@+id/mainbuttonthree"-->
-            <!--android:layout_weight="1"-->
-            <!--android:gravity="center_horizontal" />-->
+            <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--tools:text="Save"-->
+                <!--android:text="Save"-->
+                <!--android:id="@+id/mainbuttontwo"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--android:drawableTint="@color/colorAccent"-->
+                <!--android:drawableTop="@drawable/ic_favorite_black_24dp"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center_horizontal" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/mainbuttonthree"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Website"-->
+                <!--tools:text="Website"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:drawableTint="@color/colorAccent"-->
+                <!--android:drawableTop="@drawable/ic_public_black_24dp"-->
+                <!--android:gravity="center_horizontal" />-->
+
+
 
 
         </LinearLayout>

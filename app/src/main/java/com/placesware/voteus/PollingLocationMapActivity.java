@@ -3,18 +3,18 @@ package com.placesware.voteus;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
-import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.placesware.voteus.models.PollingLocation;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -37,21 +37,32 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
     ArrayList<PollingLocation> pollingLocations;
     SlidingUpPanelLayout slidingUpPanelLayout;
     SlidingUpPanelLayout.PanelState panelState;
-//    public FloatingActionButton directionsMiddleFab;
+    //    public FloatingActionButton directionsMiddleFab;
     public FloatingActionButton directionsLowerFab;
 
-    FrameLayout rootParent;
+    RelativeLayout rootParent;
 
-//    int percentMiddleHeightDp;
+    //    int percentMiddleHeightDp;
     int percentLowerHeightDp;
     int percentWidthDp;
+    private AdView mAdViewTop;
+//    private AdView mAdViewBottom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_polling_location_map_second);
 
-        rootParent = (FrameLayout) findViewById(R.id.parent);
+        mAdViewTop = (AdView) findViewById(R.id.adViewTop);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdViewTop.loadAd(adRequest);
+
+//        mAdViewBottom = (AdView) findViewById(R.id.adViewTop);
+//        AdRequest adRequestBottom = new AdRequest.Builder().build();
+//        mAdViewTop.loadAd(adRequestBottom);
+
+
+        rootParent = (RelativeLayout) findViewById(R.id.parent);
 //        directionsMiddleFab = (FloatingActionButton) findViewById(R.id.directionsmiddlefab);
         directionsLowerFab = (FloatingActionButton) findViewById(R.id.directionsfab);
 
@@ -111,6 +122,16 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
                 }
 
 
+                if (newState != SlidingUpPanelLayout.PanelState.DRAGGING) {
+                    if (newState == SlidingUpPanelLayout.PanelState.EXPANDED) {
+//                    mAdViewBottom.setVisibility(View.VISIBLE);
+                        mAdViewTop.setVisibility(View.GONE);
+                    } else {
+//                    mAdViewBottom.setVisibility(View.GONE);
+                        mAdViewTop.setVisibility(View.VISIBLE);
+                    }
+                }
+
             }
         });
         slidingUpPanelLayout.setFadeOnClickListener(new View.OnClickListener() {
@@ -133,6 +154,7 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
 //            directionsMiddleFab.show();
         }
 
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -152,8 +174,8 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
 
     public void setPanelPeakHeight(int height) {
         slidingUpPanelLayout.setPanelHeight(height);
-        setMargins(directionsLowerFab, 0, 0, percentWidthDp, height- new Double(height*.25).intValue());
-        float middleY = slidingUpPanelLayout.getBottom() + slidingUpPanelLayout.getPanelHeight()/getApplicationContext().getResources().getDisplayMetrics().density;
+        setMargins(directionsLowerFab, 0, 0, percentWidthDp, height - new Double(height * .25).intValue());
+        float middleY = slidingUpPanelLayout.getBottom() + slidingUpPanelLayout.getPanelHeight() / getApplicationContext().getResources().getDisplayMetrics().density;
 //        setMargins(directionsMiddleFab, 0, 0, percentWidthDp, new Double(middleY).intValue()+new Double(middleY).intValue());
 
         slidingUpPanelLayout.setParallaxOffset(height);
@@ -169,10 +191,10 @@ public class PollingLocationMapActivity extends FragmentActivity implements OnMa
         }
     }
 
-    public void getMapsLocationIntent(String lat, String lng){
+    public void getMapsLocationIntent(String lat, String lng) {
 
         Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://maps.google.com/maps?f=d&daddr="+lat +"," + lng));
+                Uri.parse("http://maps.google.com/maps?f=d&daddr=" + lat + "," + lng));
         intent.setComponent(new ComponentName("com.google.android.apps.maps",
                 "com.google.android.maps.MapsActivity"));
         startActivity(intent);

@@ -1,10 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.placesware.voteus.PollingLocationMapActivity">
+    tools:context="com.placesware.voteus.PollingLocationMapActivity"
+    android:id="@+id/parent">
+
+
+
+
+<FrameLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
 
 
 
@@ -22,10 +35,12 @@
 
 
         <!-- MAIN CONTENT -->
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+
 
             <fragment xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:map="http://schemas.android.com/apk/res-auto"
@@ -37,7 +52,10 @@
                 tools:context="com.placesware.voteus.PollingLocationMapActivity" />
 
 
-        </LinearLayout>
+
+
+
+        </FrameLayout>
 
         <!--<android.support.design.widget.FloatingActionButton-->
             <!--android:id="@+id/fabf"-->
@@ -68,6 +86,19 @@
 
         </LinearLayout>
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+
+
 
 
         <!--&lt;!&ndash; FLOATING ACTION BUTTON &ndash;&gt;-->
@@ -113,3 +144,4 @@
         <!--/>-->
 
 </FrameLayout>
+</RelativeLayout>
